@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- /bootstrap -->
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css">
     <!-- /my style -->
@@ -18,23 +22,33 @@
 
 <body>
     <div id="app">
+        <div class="input-group py-3 mt-3">
+            <input v-model="myInput.text" type="text" class="form-control" placeholder="Inserisci qualcosa da fare" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button @click="addToDo" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+        </div>
+          
         <ul>
-            <template v-for="item in toDoList">
+            <template v-for="(item, index) in toDoList">
                 <li v-if="item.done === true">
-                    <span class="doneToDo">{{ item.text }}</span> <i class="fa-solid fa-xmark"></i>
+                    <span class="doneToDo">{{ item.text }}</span> <i @click="removeToDo" class="fa-solid fa-xmark"></i>
                 </li>
                 <li v-else="item.done === false">
-                    <span>{{ item.text }}</span> <i class="fa-solid fa-xmark"></i>
+                    <span>{{ item.text }}</span> <i @click="removeToDo" class="fa-solid fa-xmark"></i>
                 </li>
-            </template> 
+            </template>
         </ul>
     </div>
-<!-- vue js -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<!-- /vue js -->
-<!-- my js -->
-<script src="js/main.js"></script>
-<!-- /my js -->
+    <!-- vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /vue js -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- /bootstrap js -->
+    <!-- my js -->
+    <script src="js/main.js"></script>
+    <!-- /my js -->
 </body>
 
 </html>
