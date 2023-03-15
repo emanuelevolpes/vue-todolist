@@ -15,3 +15,7 @@ Reset
 Common
 --------
 */
+
+.doneToDo {
+    text-decoration: line-through;
+}

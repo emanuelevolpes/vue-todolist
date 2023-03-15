@@ -20,7 +20,10 @@
     <div id="app">
         <ul>
             <template v-for="item in toDoList">
-                <li v-if="item.done === true">
+                <li v-if="item.done === true" class="doneToDo">
+                    {{ item.text }}
+                </li>
+                <li v-else="item.done === false">
                     {{ item.text }}
                 </li>
             </template> 
