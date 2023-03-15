@@ -16,6 +16,30 @@ Common
 --------
 */
 
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .625rem .3125rem .625rem .3125rem;
+    border: .0625rem solid black;
+}
+
 .doneToDo {
     text-decoration: line-through;
+}
+
+/*
+--------
+Main
+--------
+*/
+
+#app {
+    width: 18.75rem;
+    margin: 0 auto;
+    background-color: pink;
 }

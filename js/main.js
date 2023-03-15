@@ -1,6 +1,7 @@
 'use strict';
 
-// Stampare all’interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
+//Visualizzare a fianco ad ogni item ha una “x”: 
+//cliccando su di essa, il todo viene rimosso dalla lista.
 
 const { createApp } = Vue;
 
@@ -14,7 +15,7 @@ createApp({
                 },
                 {
                     text: 'Comprare il pane',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Andare in palestra',
