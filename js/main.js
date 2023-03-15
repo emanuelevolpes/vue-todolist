@@ -14,7 +14,7 @@ createApp({
                 },
                 {
                     text: 'Comprare il pane',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Andare in palestra',

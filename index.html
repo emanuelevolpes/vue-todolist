@@ -19,9 +19,11 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="item in toDoList" v-if="item.done === true">
-                {{ item.text }}
-            </li>
+            <template v-for="item in toDoList">
+                <li v-if="item.done === true">
+                    {{ item.text }}
+                </li>
+            </template> 
         </ul>
     </div>
 <!-- vue js -->
