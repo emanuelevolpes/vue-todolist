@@ -30,6 +30,11 @@ createApp({
         addToDo() {
             this.toDoList.push({ text: this.myInput, done: false });
             this.myInput = '';
-        }
+        },
+        // changeDoneValue(done) {
+        //     if (this.toDoList === true) {
+        //         console.log('è true');
+        //     } console.log('è false')
+        // }
     }
 }).mount('#app');
