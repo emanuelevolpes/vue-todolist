@@ -35,8 +35,8 @@ createApp({
         }
     },
     methods: {
-        removeToDo() {
-            console.log(this.toDoList)
+        removeToDo(index) {
+            this.toDoList.splice(index, 1);
         },
         addToDo() {
             this.toDoList.push(this.myInput);

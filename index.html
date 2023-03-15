@@ -30,10 +30,10 @@
         <ul>
             <template v-for="(item, index) in toDoList">
                 <li v-if="item.done === true">
-                    <span class="doneToDo">{{ item.text }}</span> <i @click="removeToDo" class="fa-solid fa-xmark"></i>
+                    <span class="doneToDo">{{ item.text }}</span> <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
                 <li v-else="item.done === false">
-                    <span>{{ item.text }}</span> <i @click="removeToDo" class="fa-solid fa-xmark"></i>
+                    <span>{{ item.text }}</span> <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </template>
         </ul>
