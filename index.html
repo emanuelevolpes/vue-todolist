@@ -17,6 +17,13 @@
 </head>
 
 <body>
+    <div id="app">
+        <ul>
+            <li v-for="item in toDoList">
+                {{ item.text }}
+            </li>
+        </ul>
+    </div>
 <!-- vue js -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <!-- /vue js -->
