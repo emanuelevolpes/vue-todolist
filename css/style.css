@@ -40,6 +40,7 @@ li {
     border-radius: .625rem;
     margin-bottom: .3125rem;
     background-color: white;
+    cursor: pointer;
 }
 
 .doneToDo {
