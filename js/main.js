@@ -5,7 +5,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            myInput: '',   
+            myInput: '',
             xOnToDo: '',
             toDoList: [
                 {
@@ -28,8 +28,10 @@ createApp({
             this.toDoList.splice(index, 1);
         },
         addToDo() {
-            this.toDoList.push({ text: this.myInput, done: false });
-            this.myInput = '';
+            if (this.myInput.trim() !== '') {
+                this.toDoList.push({ text: this.myInput, done: false });
+                this.myInput = '';
+            }
         },
         changeDoneValue(index) {
             if (this.toDoList[index].done === true) {
@@ -37,6 +39,8 @@ createApp({
             } else {
                 this.toDoList[index].done = true;
             }
+
+            // this.toDoList[index].done = !this.toDoList[index].done (soluzione con operatore not)
         }
     }
 }).mount('#app');
