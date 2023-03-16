@@ -10,7 +10,7 @@ createApp({
             toDoList: [
                 {
                     text: 'Rifare documentazione Vue',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Comprare il pane',

@@ -38,7 +38,8 @@ li {
     padding: .625rem .3125rem .625rem .3125rem;
     outline: .0625rem solid lightgray;
     border-radius: .625rem;
-    margin-bottom: .0625rem;
+    margin-bottom: .3125rem;
+    background-color: white;
 }
 
 .doneToDo {
@@ -54,4 +55,7 @@ Main
 #app {
     width: 50rem;
     margin: 0 auto;
+    padding: 1.25rem;
+    background-color: #d16928;
+    border-radius: .625rem;
 }
