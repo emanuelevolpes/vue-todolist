@@ -36,7 +36,7 @@ createApp({
                 this.toDoList[index].done = false;
             } else {
                 this.toDoList[index].done = true;
-            };
+            }
         }
     }
 }).mount('#app');
