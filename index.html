@@ -34,10 +34,10 @@
         <ul>
             <template v-for="(item, index) in toDoList">
                 <li v-if="item.done === true">
-                    <span @click="changeDoneValue" class="doneToDo">{{ item.text }}</span> <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
+                    <span @click="changeDoneValue(index)" class="doneToDo">{{ item.text }}</span> <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
                 <li v-else="item.done === false">
-                    <span @click="changeDoneValue">{{ item.text }}</span> <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
+                    <span @click="changeDoneValue(index)">{{ item.text }}</span> <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </template>
         </ul>

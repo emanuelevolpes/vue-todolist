@@ -31,10 +31,12 @@ createApp({
             this.toDoList.push({ text: this.myInput, done: false });
             this.myInput = '';
         },
-        // changeDoneValue(done) {
-        //     if (this.toDoList === true) {
-        //         console.log('è true');
-        //     } console.log('è false')
-        // }
+        changeDoneValue(index) {
+            if (this.toDoList[index].done === true) {
+                this.toDoList[index].done = false;
+            } else {
+                this.toDoList[index].done = true;
+            };
+        }
     }
 }).mount('#app');

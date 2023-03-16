@@ -36,7 +36,7 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: .625rem .3125rem .625rem .3125rem;
-    outline: .0625rem solid black;
+    outline: .0625rem solid lightgray;
     border-radius: .625rem;
     margin-bottom: .0625rem;
 }
